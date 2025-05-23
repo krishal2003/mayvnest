@@ -1,0 +1,81 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Mayvnest — Contact Us',
+  description: 'Learn more about Mayvnest, your trusted workforce scheduling partner in Australia.',
+  ignoreTitleTemplate: true,
+  url: 'https://www.Mayvnest.com/about',
+  image: '/nest.png', // path relative to the public folder root
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="Contact" title="Get in Touch with Mayvnest!" />
+
+  <ContactUs
+    id="form"
+    title="Send us a message"
+    subtitle="Have questions or need assistance? Our dedicated support team is here to help you. For faster answers, check our FAQs first."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Your Name',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Your Email',
+      },
+    ]}
+    textarea={{
+      label: 'Your Message',
+    }}
+    disclaimer={{
+      label:
+        'By submitting this form, you agree to our collection and processing of your personal information as described in our Privacy Policy.',
+    }}
+    description="We typically respond within one business day."
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Support and Contact Options"
+    items={[
+      {
+        title: 'General Support',
+        description: 'Questions about your Mayvnest account, billing, or using the platform? Reach out to us!',
+      },
+      {
+        title: 'Sales Inquiries',
+        description: 'Interested in Mayvnest? Contact our sales team for pricing, plans, or custom solutions.',
+      },
+      {
+        title: 'Technical Support',
+        description: 'Encountering issues with scheduling, app functionality, or integrations? We’re here to help.',
+      },
+      {
+        title: 'Phone',
+        description: '+61 xxxxxxxxxx',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Email',
+        description: 'support@Mayvnest.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Location',
+        description: 'Melbourne, Australia',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  />
+</Layout>

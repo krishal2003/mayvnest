@@ -1,0 +1,177 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Mayvnest — About Us',
+  description: 'Learn more about Mayvnest, your trusted workforce scheduling partner in Australia.',
+  ignoreTitleTemplate: true,
+  url: 'https://www.Mayvnest.com/about',
+  image: '/nest.png', // path relative to the public folder root
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="About Us"
+    image={{
+      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Team collaborating image',
+    }}
+  >
+    <Fragment slot="title">
+      Building Smarter Workforce Solutions<br />
+      <span class="text-accent dark:text-white">with Mayvnest</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      At Mayvnest, we’re dedicated to simplifying workforce management with easy-to-use, powerful scheduling tools that
+      empower teams and businesses across Australia. Our mission is to increase productivity through intuitive
+      technology and reliable support.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Our Growth in Numbers"
+    stats={[
+      { title: 'Offices in Australia', amount: '4' },
+      { title: 'Team Members', amount: '50+' },
+      { title: 'Clients Served', amount: '500+' },
+      { title: 'Successful Schedules', amount: '1M+' },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Our Core Strengths"
+    subtitle="We specialize in creating seamless scheduling experiences that save time and reduce stress."
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'User-friendly Interface',
+        description: 'Easy onboarding and intuitive controls to help teams get started quickly and stay productive.',
+        icon: 'tabler:layout-dashboard',
+      },
+      {
+        title: 'Cross-platform Access',
+        description: 'Fully functional mobile apps and web platform accessible anywhere, anytime.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Reliable Support',
+        description: 'Our dedicated customer success team is always ready to assist you.',
+        icon: 'tabler:headset',
+      },
+    ]}
+  />
+
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Data Security',
+        description: 'We prioritize the privacy and security of your data with enterprise-grade protocols.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Custom Integrations',
+        description: 'Easily connect Mayvnest with your existing payroll and HR systems for streamlined operations.',
+        icon: 'tabler:plug-connected',
+      },
+      {
+        title: 'Scalable Solutions',
+        description: 'Whether you’re a small business or large enterprise, Mayvnest scales to meet your needs.',
+        icon: 'tabler:arrows-maximize',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Teamwork and planning',
+    }}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Our Values"
+    subtitle="Guiding principles that shape everything we do"
+    items={[
+      {
+        title: 'Customer Focus',
+        description: 'We listen and adapt to meet our customers’ unique needs, delivering solutions that truly help.',
+      },
+      {
+        title: 'Continuous Innovation',
+        description: 'Always evolving our platform to offer the latest technology and features.',
+      },
+      {
+        title: 'Integrity & Transparency',
+        description: 'Building trust through honest communication and reliable service.',
+      },
+    ]}
+  />
+
+  <Steps2
+    title="Milestones"
+    subtitle="Our journey so far and the road ahead"
+    isReversed={true}
+    callToAction={{
+      text: 'Learn More',
+      href: '/blog',
+    }}
+    items={[
+      {
+        title: 'Established in Australia',
+        description: 'Headquartered in Sydney, we focus on serving local businesses with world-class software.',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Award-Winning Software',
+        description: 'Recognized for innovation and user experience in workforce management.',
+        icon: 'tabler:award',
+      },
+      {
+        title: 'Trusted by Hundreds',
+        description: 'Proudly supporting over 500 Australian organizations with their scheduling needs.',
+        icon: 'tabler:users',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Our Locations"
+    tagline="Find us across Australia"
+    columns={4}
+    items={[
+      {
+        title: 'Melbourne',
+        description: '100 Collins St, Melbourne, VIC 3000',
+      },
+      {
+        title: 'Sydney',
+        description: '123 Corporate Ave, Sydney, NSW 2000',
+      },
+      {
+        title: 'Perth',
+        description: '50 St Georges Terrace, Perth, WA 6000',
+      },
+      {
+        title: 'Canberra',
+        description: '10 Constitution Ave, Canberra, ACT 2601',
+      },
+    ]}
+  />
+</Layout>

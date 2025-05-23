@@ -1,0 +1,177 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Mayvnest — Pricing',
+  description: 'Learn more about Mayvnest, your trusted workforce scheduling partner in Australia.',
+  ignoreTitleTemplate: true,
+  url: 'https://www.Mayvnest.com/about',
+  image: '/nest.png', // path relative to the public folder root
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="Pricing"
+    title="Flexible Pricing for Your Workforce"
+    subtitle="Choose a plan that fits your team size and needs with Mayvnest."
+  />
+
+  <!-- Pricing Widget ******************* -->
+
+  <Prices
+    title="Our prices"
+    subtitle="Only pay for what you need"
+    prices={[
+      {
+        title: 'Basic',
+        subtitle: 'Perfect for individuals and small teams',
+        price: 1,
+        period: 'per user / month',
+        items: [
+          { description: 'Access to core roster management features' },
+          { description: 'Create and manage employee schedules' },
+          { description: 'Email support during business hours' },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get started',
+          href: '#',
+        },
+      },
+      {
+        title: 'Medium',
+        subtitle: 'Ideal for growing teams and small businesses',
+        price: 2,
+        period: 'per user / month',
+        items: [
+          { description: 'Includes all Basic features' },
+          { description: 'Advanced scheduling and shift swapping' },
+          { description: 'Mobile app access for on-the-go management' },
+          { description: 'Priority email and chat support' },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get started',
+          href: '#',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'popular',
+      },
+      {
+        title: 'Premium',
+        subtitle: 'Designed for large teams and enterprises',
+        price: 3,
+        period: 'per user / month',
+        items: [
+          { description: 'Includes all Medium features' },
+          { description: 'Custom reporting and analytics' },
+          { description: 'Dedicated account manager' },
+          { description: '24/7 premium support' },
+          { description: 'Integration with payroll and HR systems' },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get started',
+          href: '#',
+        },
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Why Choose Mayvnest?"
+    subtitle="Efficient, transparent, and reliable workforce management"
+    columns={2}
+    items={[
+      {
+        title: 'User-based Pricing',
+        description: 'Pay only for active users with simple per-user, per-month pricing.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Easy Schedule Management',
+        description: 'Create, edit, and share schedules effortlessly.',
+        icon: 'tabler:calendar',
+      },
+      {
+        title: 'Mobile Accessibility',
+        description: 'Manage shifts and communicate with staff from anywhere.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Robust Support',
+        description: 'Get help when you need it through various support channels.',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Secure and Reliable',
+        description: 'Your data is protected with enterprise-grade security standards.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Scalable Plans',
+        description: 'Upgrade anytime to add advanced features as your business grows.',
+        icon: 'tabler:arrow-up-right',
+      },
+    ]}
+    classes={{ container: 'max-w-5xl' }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Pricing FAQs"
+    subtitle="Choosing the right plan is important, and we're here to answer your questions. If you have queries about our pricing options, you're in the right place."
+    columns={1}
+    items={[
+      {
+        title: 'Do the plans come with customer support?',
+        description:
+          'Absolutely, all plans include access to our dedicated customer support to assist you with any queries or concerns.',
+      },
+      {
+        title: 'Is there a trial period for the different plans?',
+        description:
+          "Unfortunately, we don't offer trial periods for the plans. However, you can check out our demo to preview Mayvnest's features.",
+      },
+      {
+        title: 'Can I switch between plans?',
+        description:
+          'Certainly! You can easily upgrade or downgrade your plan at any time to fit your evolving team needs.',
+      },
+      {
+        title: 'What payment methods do you accept?',
+        description: 'We accept all major credit cards and online payment methods for your convenience and security.',
+      },
+      {
+        title: 'Are there any hidden fees beyond the displayed cost?',
+        description:
+          'No, the subscription cost covers all features listed under each plan. There are no hidden fees or extra charges.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Ready to simplify your workforce management?"
+    subtitle="Start your free trial today and see how Mayvnest can help you save time and improve scheduling."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get started now',
+        href: '/contact',
+      },
+    ]}
+  />
+</Layout>

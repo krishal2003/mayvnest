@@ -1,0 +1,69 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Button from '~/components/ui/Button.astro';
+import { Icon } from 'astro-icon/components';
+
+const metadata = {
+  title: 'Mayvnest — Download',
+  description: 'Learn more about Mayvnest, your trusted workforce scheduling partner in Australia.',
+  ignoreTitleTemplate: true,
+  url: 'https://www.Mayvnest.com/about',
+  image: '/nest.png', // path relative to the public folder root
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <HeroText
+    tagline="Download"
+    title="Get Mayvnest on Your Device"
+    subtitle="Manage your workforce anytime, anywhere. Download our app from your favorite store."
+  />
+
+  <!-- Download Links Section -->
+  <WidgetWrapper containerClass="max-w-4xl mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- App Store -->
+      <div
+        class="flex flex-col items-center bg-white dark:bg-slate-900 rounded-xl shadow-md p-8 text-center border border-gray-200 dark:border-gray-700"
+      >
+        <Icon name="tabler:brand-apple" class="w-16 h-16 mb-6 text-gray-900 dark:text-white" />
+        <h3 class="text-2xl font-semibold mb-2 text-gray-900 dark:text-white">Download on the App Store</h3>
+        <p class="mb-6 text-gray-600 dark:text-gray-300">
+          Get the latest Mayvnest iOS app for iPhone and iPad. Stay connected and manage your roster with ease.
+        </p>
+        <Button
+          href="https://apps.apple.com/app/Mayvnest-ios"
+          target="_blank"
+          variant="primary"
+          class="inline-flex items-center space-x-2"
+        >
+          <Icon name="tabler:download" class="w-5 h-5" />
+          <span>Download on iOS</span>
+        </Button>
+      </div>
+
+      <!-- Google Play Store -->
+      <div
+        class="flex flex-col items-center bg-white dark:bg-slate-900 rounded-xl shadow-md p-8 text-center border border-gray-200 dark:border-gray-700"
+      >
+        <Icon name="tabler:brand-google-play" class="w-16 h-16 mb-6 text-gray-900 dark:text-white" />
+        <h3 class="text-2xl font-semibold mb-2 text-gray-900 dark:text-white">Get it on Google Play</h3>
+        <p class="mb-6 text-gray-600 dark:text-gray-300">
+          Download the Mayvnest Android app to manage your team and schedules anytime, on any device.
+        </p>
+        <Button
+          href="https://play.google.com/store/apps/details?id=com.Mayvnest.android"
+          target="_blank"
+          variant="primary"
+          class="inline-flex items-center space-x-2"
+        >
+          <Icon name="tabler:download" class="w-5 h-5" />
+          <span>Download on Android</span>
+        </Button>
+      </div>
+    </div>
+  </WidgetWrapper>
+</Layout>

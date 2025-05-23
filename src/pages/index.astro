@@ -1,0 +1,241 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Mayvnest — Workforce Management Made Easy',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get Mayvnest',
+        href: '/download',
+        icon: 'tabler:download',
+      },
+      { text: 'Learn more', href: '#features' },
+    ]}
+    image={{ src: '~/assets/images/Mayvnest-hero.png', alt: 'Mayvnest Hero Image' }}
+  >
+    <Fragment slot="title">
+      Simplify Your <span class="text-accent dark:text-white">Workforce Scheduling</span> with Mayvnest
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Mayvnest is your all-in-one roster management app, designed to help teams schedule shifts, communicate, and track
+      time effortlessly.
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Features"
+    title="What Mayvnest Offers"
+    subtitle="Powerful tools designed for modern workforce management"
+    items={[
+      {
+        title: 'Intuitive Scheduling',
+        description: 'Create, edit, and share shifts with a user-friendly drag-and-drop interface.',
+        icon: 'tabler:calendar-event',
+      },
+      {
+        title: 'Mobile Access',
+        description: 'Manage your team and schedules on the go with our native iOS and Android apps.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Shift Swapping',
+        description: 'Allow employees to swap shifts easily, reducing scheduling conflicts.',
+        icon: 'tabler:repeat',
+      },
+      {
+        title: 'Time Tracking',
+        description: 'Monitor clock-ins and outs to ensure accurate payroll and attendance.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Team Communication',
+        description: 'Built-in messaging to keep your team informed and connected.',
+        icon: 'tabler:message-circle',
+      },
+      {
+        title: 'Reports & Analytics',
+        description: 'Gain insights into workforce productivity and labor costs with customizable reports.',
+        icon: 'tabler:chart-bar',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Technology"
+    title="Built for Performance and Scalability"
+    items={[
+      {
+        title: 'Modern Web Architecture',
+        description: 'Mayvnest uses cutting-edge technology to deliver fast and reliable performance.',
+      },
+      {
+        title: 'Secure and Private',
+        description: 'Your data is encrypted and securely stored with industry best practices.',
+      },
+      {
+        title: 'Cross-Platform Compatibility',
+        description: 'Works flawlessly on desktop browsers and mobile devices.',
+      },
+    ]}
+    image={{
+      src: 'https://cdn-ikplill.nitrocdn.com/kgosseraVmVBqCNnNguFRlTkycYZnQFo/assets/images/optimized/rev-faaf608/upperhand.com/wp-content/uploads/2023/12/Teams-Homepage-Illustration.png',
+      alt: 'Technology illustration',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Modern Tools, Modern Teams</h3>
+      Empower your workforce with tools built for today’s fast-paced environments.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="How Mayvnest Works"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Create Your Account</span>',
+        description: 'Sign up and set up your company profile quickly to get started.',
+        icon: 'tabler:user-plus',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Add Your Team</span>',
+        description: 'Invite employees and set their roles and permissions.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Build Your Schedule</span>',
+        description: 'Create shifts, assign staff, and publish schedules in minutes.',
+        icon: 'tabler:calendar-event',
+      },
+      {
+        title: 'Step 4: <span class="font-medium">Manage & Track</span>',
+        description: 'Use time tracking and communication tools to keep your team productive.',
+        icon: 'tabler:activity',
+      },
+      {
+        title: 'You’re Ready!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps illustration',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Popular Tools"
+    subtitle="Essential widgets to enhance your Mayvnest experience"
+    tagline="Components"
+    items={[
+      {
+        title: 'Schedule Builder',
+        description: 'Drag-and-drop your team’s shifts with ease.',
+        icon: 'tabler:calendar',
+      },
+      {
+        title: 'Shift Swap Requests',
+        description: 'Approve or decline shift swaps with notifications.',
+        icon: 'tabler:repeat',
+      },
+      {
+        title: 'Push Notifications',
+        description: 'Keep your team updated in real time.',
+        icon: 'tabler:notification',
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Pricing FAQs"
+    subtitle="Choosing the right plan is important, and we're here to answer your questions. If you have queries about our pricing options, you're in the right place."
+    columns={1}
+    items={[
+      {
+        title: 'Do the plans come with customer support?',
+        description:
+          'Absolutely, all plans include access to our dedicated customer support to assist you with any queries or concerns.',
+      },
+      {
+        title: 'Is there a trial period for the different plans?',
+        description:
+          "Unfortunately, we don't offer trial periods for the plans. However, you can check out our demo to preview Mayvnest's features.",
+      },
+      {
+        title: 'Can I switch between plans?',
+        description:
+          'Certainly! You can easily upgrade or downgrade your plan at any time to fit your evolving team needs.',
+      },
+      {
+        title: 'What payment methods do you accept?',
+        description: 'We accept all major credit cards and online payment methods for your convenience and security.',
+      },
+      {
+        title: 'Are there any hidden fees beyond the displayed cost?',
+        description:
+          'No, the subscription cost covers all features listed under each plan. There are no hidden fees or extra charges.',
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Users', amount: '50K+' },
+      { title: 'Shifts Scheduled', amount: '1.2M+' },
+      { title: 'Mobile Downloads', amount: '75K+' },
+      { title: 'Customer Support Tickets Solved', amount: '98%' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Ready to streamline your workforce scheduling?"
+    subtitle="Join thousands of satisfied teams using Mayvnest to boost productivity."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get Started Now',
+        href: '/contact',
+      },
+    ]}
+  />
+</Layout>
